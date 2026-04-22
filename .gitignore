@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Expo
+.expo/
+dist/
+web-build/
+*.orig.*
+
+# Native
+*.iml
+.idea/
+.gradle
+local.properties
+*.hprof
+
+# iOS
+*.ipa
+*.pem
+ios/Pods/
+ios/build/
+
+# Android
+*.apk
+*.aab
+android/.gradle/
+android/app/build/
+android/build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# Testing
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build / cache
+dist/
+build/
+.cache/

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEMOSAN (세모산) — Lo-fi Wireframes</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<!-- ===== Page Header ===== -->
+<header class="page-header">
+  <div class="page-title">SEMOSAN (세모산) — Lo-fi Wireframes</div>
+  <div class="page-subtitle">
+    실시간 밀착 등산 도우미 MVP의 16개 핵심 화면 저충실도 와이어프레임입니다.
+    레이아웃과 정보 구조 검증이 목적이며, 시각 디자인은 다음 단계에서 적용합니다.
+  </div>
+  <div class="page-meta">v0.1 · 2026-04-22 · iPhone 375×812 기준</div>
+  <div class="legend">
+    <span><span class="dot"></span>플레이스홀더</span>
+    <span><span class="dot" style="background:#2B2B2B"></span>주요 액션 / 강조</span>
+    <span><span class="dot" style="background:transparent;border:1px solid #C8C8CE"></span>보조 영역</span>
+  </div>
+</header>
+
+<!-- ===================== SECTION 1: ONBOARDING ===================== -->
+<section class="section">
+  <h2 class="section-title"><span class="section-num">01</span>온보딩 — Onboarding</h2>
+  <div class="frames">
+
+    <!-- 1. 로그인 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">01-01</span>소셜 로그인</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="body" style="display:flex;flex-direction:column;padding:40px 28px;height:calc(100% - 44px);">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;">
+            <div class="ico-lg" style="width:80px;height:80px;border-radius:20px;"></div>
+            <div style="text-align:center;">
+              <div class="h1" style="font-size:28px;margin-bottom:8px;">SEMOSAN</div>
+              <div class="body-text">실시간 밀착 등산 도우미</div>
+            </div>
+          </div>
+          <div class="col" style="gap:12px;">
+            <div class="btn btn-full">Apple로 시작하기</div>
+            <div class="btn btn-full btn-ghost">카카오로 시작하기</div>
+            <div class="btn btn-full btn-ghost">네이버로 시작하기</div>
+            <div style="text-align:center;font-size:13px;color:var(--text-3);margin-top:12px;text-decoration:underline;">둘러보기 (비회원)</div>
+          </div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 2. 건강 데이터 연동 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">01-02</span>건강 데이터 연동</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="topbar"><span class="back">←</span><span class="title">1 / 2</span></div>
+        <div class="body with-topbar" style="padding:24px 20px;">
+          <div style="margin-bottom:8px;" class="label">STEP 01</div>
+          <div class="h1" style="margin-bottom:12px;">체력 수준을 분석할게요</div>
+          <div class="body-text" style="margin-bottom:24px;">
+            건강 데이터를 연동하면 더 정확한 산/코스 추천을 받을 수 있어요.
+          </div>
+
+          <div class="box" style="padding:20px;background:#fff;">
+            <div class="row" style="gap:12px;margin-bottom:16px;">
+              <div class="ico-lg"></div>
+              <div>
+                <div class="h3">Apple Health 연동</div>
+                <div class="body-text" style="font-size:12px;">(Android: Google Fit)</div>
+              </div>
+            </div>
+            <div class="col" style="gap:10px;">
+              <div class="row"><div class="ico-sm"></div><span class="body-text">평균 걸음 수</span></div>
+              <div class="row"><div class="ico-sm"></div><span class="body-text">최근 운동 기록</span></div>
+              <div class="row"><div class="ico-sm"></div><span class="body-text">심박수 (선택)</span></div>
+            </div>
+          </div>
+
+          <div style="flex:1;"></div>
+          <div class="col" style="gap:10px;margin-top:auto;position:absolute;bottom:40px;left:20px;right:20px;">
+            <div class="btn btn-full">연동하기</div>
+            <div style="text-align:center;font-size:13px;color:var(--text-3);">건너뛰기</div>
+          </div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 3. 자가진단 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">01-03</span>자가진단 (체력 레벨)</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="topbar"><span class="back">←</span><span class="title">2 / 2</span></div>
+        <div class="body with-topbar" style="padding:24px 20px;">
+          <div class="progress" style="margin-bottom:20px;"><div class="progress-fill" style="width:100%;"></div></div>
+
+          <div class="h2" style="margin-bottom:12px;">평소 운동 빈도는?</div>
+          <div class="col" style="gap:8px;margin-bottom:28px;">
+            <div class="box row" style="padding:14px 16px;gap:12px;"><div class="ico-sm ico-round"></div><span>거의 안 함</span></div>
+            <div class="box row" style="padding:14px 16px;gap:12px;"><div class="ico-sm ico-round"></div><span>주 1~2회</span></div>
+            <div class="box row" style="padding:14px 16px;gap:12px;background:#fff;border-color:var(--accent);"><div class="ico-sm ico-round" style="background:var(--accent);border-color:var(--accent);"></div><span style="font-weight:600;">주 3~4회</span></div>
+            <div class="box row" style="padding:14px 16px;gap:12px;"><div class="ico-sm ico-round"></div><span>거의 매일</span></div>
+          </div>
+
+          <div class="h2" style="margin-bottom:12px;">3km 걷기 소요 시간?</div>
+          <div class="col" style="gap:8px;">
+            <div class="box row" style="padding:14px 16px;gap:12px;"><div class="ico-sm ico-round"></div><span>45분 이상</span></div>
+            <div class="box row" style="padding:14px 16px;gap:12px;background:#fff;border-color:var(--accent);"><div class="ico-sm ico-round" style="background:var(--accent);border-color:var(--accent);"></div><span style="font-weight:600;">30~45분</span></div>
+            <div class="box row" style="padding:14px 16px;gap:12px;"><div class="ico-sm ico-round"></div><span>30분 이하</span></div>
+          </div>
+
+          <div class="btn btn-full" style="position:absolute;bottom:40px;left:20px;right:20px;">다음</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== SECTION 2: HOME & RECORDS ===================== -->
+<section class="section">
+  <h2 class="section-title"><span class="section-num">02</span>홈 & 기록 — Home & Records</h2>
+  <div class="frames">
+
+    <!-- 4. 홈 지도형 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">02-01</span>홈 — 지도형 (기본)</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <!-- Profile header -->
+        <div style="padding:12px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);">
+          <div class="avatar"></div>
+          <div style="flex:1;">
+            <div style="font-size:14px;font-weight:600;">등린이_민</div>
+            <div style="font-size:11px;color:var(--text-3);">🏔 초보 등산가</div>
+          </div>
+          <div class="ico"></div>
+        </div>
+        <!-- Map -->
+        <div style="position:relative;height:calc(100% - 44px - 69px - 83px);">
+          <div class="map" style="position:absolute;inset:0;border-radius:0;border:none;">
+            <div class="map-pin" style="top:25%;left:30%;"></div>
+            <div class="map-pin" style="top:45%;left:55%;"></div>
+            <div class="map-pin" style="top:60%;left:25%;"></div>
+            <div class="map-pin" style="top:35%;left:70%;"></div>
+            <div class="map-pin" style="top:70%;left:60%;"></div>
+          </div>
+          <!-- Toggle -->
+          <div style="position:absolute;top:16px;right:16px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;display:flex;gap:2px;">
+            <div class="chip chip-dark" style="padding:6px 14px;border-radius:999px;">지도</div>
+            <div class="chip" style="padding:6px 14px;border:none;background:transparent;">리스트</div>
+          </div>
+          <!-- Legend -->
+          <div style="position:absolute;bottom:16px;left:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:10px;">
+            <div class="row" style="gap:6px;margin-bottom:4px;"><span style="width:6px;height:6px;background:var(--accent);border-radius:50%;"></span>등산한 산</div>
+            <div class="row" style="gap:6px;margin-bottom:4px;"><span style="width:6px;height:6px;background:var(--fill);border-radius:50%;"></span>추천</div>
+            <div class="row" style="gap:6px;"><span style="width:6px;height:6px;background:#fff;border:1px solid var(--text-2);border-radius:50%;"></span>큐레이션</div>
+          </div>
+        </div>
+        <!-- Tabbar -->
+        <div class="tabbar">
+          <div class="tab active"><div class="tab-icon"></div>홈</div>
+          <div class="tab"><div class="tab-icon"></div>산목록</div>
+          <div class="tab"><div class="tab-icon"></div>트래킹</div>
+          <div class="tab"><div class="tab-icon"></div>커뮤니티</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 5. 홈 리스트형 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">02-02</span>홈 — 리스트형</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div style="padding:12px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);">
+          <div class="chip">정렬: 최신순 ▼</div>
+          <div style="background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px;display:flex;gap:2px;">
+            <div class="chip" style="padding:6px 10px;border:none;background:transparent;">지도</div>
+            <div class="chip chip-dark" style="padding:6px 10px;border-radius:999px;">리스트</div>
+          </div>
+        </div>
+        <div class="body with-tabbar" style="padding:12px 20px;overflow:hidden;">
+          <div class="col" style="gap:12px;">
+            <div class="box" style="padding:12px;display:flex;gap:12px;">
+              <div class="placeholder-img" style="width:80px;height:80px;flex-shrink:0;">IMG</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">북한산 백운대</div>
+                <div class="mono" style="margin-bottom:8px;">2026-04-15 · 3.2km · 2h 15m</div>
+                <div class="chip" style="padding:3px 8px;font-size:10px;">후기 작성 →</div>
+              </div>
+            </div>
+            <div class="box" style="padding:12px;display:flex;gap:12px;">
+              <div class="placeholder-img" style="width:80px;height:80px;flex-shrink:0;">IMG</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">관악산 연주대</div>
+                <div class="mono" style="margin-bottom:8px;">2026-04-08 · 4.1km · 2h 45m</div>
+                <div class="chip chip-dark" style="padding:3px 8px;font-size:10px;">✓ 후기 완료</div>
+              </div>
+            </div>
+            <div class="box" style="padding:12px;display:flex;gap:12px;">
+              <div class="placeholder-img" style="width:80px;height:80px;flex-shrink:0;">IMG</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">도봉산 신선대</div>
+                <div class="mono" style="margin-bottom:8px;">2026-03-22 · 5.0km · 3h 10m</div>
+                <div class="chip" style="padding:3px 8px;font-size:10px;">후기 작성 →</div>
+              </div>
+            </div>
+            <div class="box" style="padding:12px;display:flex;gap:12px;">
+              <div class="placeholder-img" style="width:80px;height:80px;flex-shrink:0;">IMG</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">수락산</div>
+                <div class="mono" style="margin-bottom:8px;">2026-03-10 · 3.8km · 2h 20m</div>
+                <div class="chip chip-dark" style="padding:3px 8px;font-size:10px;">✓ 후기 완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tabbar">
+          <div class="tab active"><div class="tab-icon"></div>홈</div>
+          <div class="tab"><div class="tab-icon"></div>산목록</div>
+          <div class="tab"><div class="tab-icon"></div>트래킹</div>
+          <div class="tab"><div class="tab-icon"></div>커뮤니티</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 6. 산 정보 모달 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">02-03</span>산 정보 모달 (핀 클릭)</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div style="position:relative;height:calc(100% - 44px);">
+          <div class="map" style="position:absolute;inset:0;border-radius:0;border:none;">
+            <div class="map-pin" style="top:30%;left:50%;transform:scale(1.3);"></div>
+            <div class="map-pin" style="top:15%;left:25%;"></div>
+            <div class="map-pin" style="top:20%;left:75%;"></div>
+          </div>
+          <div class="overlay"></div>
+          <div class="sheet">
+            <div class="sheet-handle"></div>
+            <div class="row" style="gap:12px;margin-bottom:16px;">
+              <div class="placeholder-img" style="width:64px;height:64px;">IMG</div>
+              <div style="flex:1;">
+                <div class="h2">북한산</div>
+                <div class="mono">서울 강북구 · 836m</div>
+              </div>
+              <div class="chip chip-dark">3회 완등</div>
+            </div>
+            <div class="divider"></div>
+            <div class="row between" style="margin-bottom:16px;">
+              <div class="col" style="gap:2px;align-items:center;"><div class="stat-num">3</div><div class="label">등산 횟수</div></div>
+              <div class="col" style="gap:2px;align-items:center;"><div class="stat-num">6.5h</div><div class="label">누적 시간</div></div>
+              <div class="col" style="gap:2px;align-items:center;"><div class="stat-num">12.5km</div><div class="label">누적 거리</div></div>
+            </div>
+            <div class="btn btn-full">등반 기록 더보기 →</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. 개별 등반 기록 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">02-04</span>개별 등반 기록</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="topbar"><span class="back">←</span><span class="title">북한산 백운대 코스</span><div class="ico"></div></div>
+        <div class="body with-topbar" style="padding:0;overflow:hidden;">
+          <div style="padding:16px 20px;">
+            <div class="row between" style="margin-bottom:16px;">
+              <div class="mono">📅 2026-04-15</div>
+              <div class="chip chip-dark">완등</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+              <div class="box" style="padding:10px;background:#fff;"><div class="label" style="margin-bottom:2px;">소요 시간</div><div class="h3">2h 15m</div></div>
+              <div class="box" style="padding:10px;background:#fff;"><div class="label" style="margin-bottom:2px;">이동 거리</div><div class="h3">3.2km</div></div>
+              <div class="box" style="padding:10px;background:#fff;"><div class="label" style="margin-bottom:2px;">고도</div><div class="h3">520m</div></div>
+              <div class="box" style="padding:10px;background:#fff;"><div class="label" style="margin-bottom:2px;">칼로리</div><div class="h3">450kcal</div></div>
+            </div>
+            <div class="map" style="height:100px;margin-bottom:6px;">
+              <div class="map-pin map-pin-user" style="top:60%;left:15%;"></div>
+              <div class="map-pin" style="top:30%;left:75%;"></div>
+            </div>
+            <div style="font-size:11px;color:var(--text-3);text-align:right;margin-bottom:16px;">지도 상세보기 →</div>
+          </div>
+          <div class="thick-divider" style="margin:0;"></div>
+          <div style="padding:16px 20px;">
+            <div class="row between" style="margin-bottom:12px;">
+              <div class="h3">📸 LiveClimb 갤러리</div>
+              <div class="mono">3장</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:16px;">
+              <div class="placeholder-img" style="aspect-ratio:1;">정상</div>
+              <div class="placeholder-img" style="aspect-ratio:1;">500m</div>
+              <div class="placeholder-img" style="aspect-ratio:1;">100m</div>
+            </div>
+            <div class="col" style="gap:8px;">
+              <div class="btn btn-full btn-ghost">💾 이미지로 저장</div>
+              <div class="btn btn-full">✍️ 후기 작성하기</div>
+            </div>
+          </div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 8. 후기 작성 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">02-05</span>후기 작성 에디터</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="topbar"><span class="back">←</span><span class="title">후기 작성</span><div class="mono" style="font-size:12px;">저장</div></div>
+        <div class="body with-topbar" style="padding:20px;">
+          <div class="mono" style="margin-bottom:16px;">북한산 백운대 코스 · 2026-04-15</div>
+
+          <div class="col" style="gap:16px;margin-bottom:24px;">
+            <div class="row between"><span class="h3">접근성</span><div class="stars"><div class="star filled"></div><div class="star filled"></div><div class="star filled"></div><div class="star filled"></div><div class="star filled"></div></div></div>
+            <div class="row between"><span class="h3">주변 시설</span><div class="stars"><div class="star filled"></div><div class="star filled"></div><div class="star filled"></div><div class="star"></div><div class="star"></div></div></div>
+            <div class="row between"><span class="h3">경치</span><div class="stars"><div class="star filled"></div><div class="star filled"></div><div class="star filled"></div><div class="star filled"></div><div class="star filled"></div></div></div>
+          </div>
+
+          <div class="label" style="margin-bottom:8px;">사진 첨부 (최대 4장)</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:20px;">
+            <div class="placeholder-img" style="aspect-ratio:1;">IMG</div>
+            <div class="placeholder-img" style="aspect-ratio:1;">IMG</div>
+            <div class="box center" style="aspect-ratio:1;color:var(--text-3);font-size:20px;">+</div>
+            <div class="box center" style="aspect-ratio:1;color:var(--text-3);font-size:20px;">+</div>
+          </div>
+
+          <div class="label" style="margin-bottom:8px;">후기 내용</div>
+          <div class="box" style="height:120px;padding:12px;background:#fff;">
+            <div class="body-text" style="color:var(--text-3);">오늘의 등산은 어떠셨나요? 경치, 코스 난이도, 꿀팁 등을 남겨보세요...</div>
+          </div>
+
+          <div class="btn btn-full" style="position:absolute;bottom:40px;left:20px;right:20px;">업로드</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== SECTION 3: MOUNTAINS ===================== -->
+<section class="section">
+  <h2 class="section-title"><span class="section-num">03</span>산 탐색 — Mountain Explorer</h2>
+  <div class="frames">
+
+    <!-- 9. 산목록 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">03-01</span>산 검색 및 목록</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div style="padding:12px 20px;border-bottom:1px solid var(--line);">
+          <div class="search" style="margin-bottom:10px;"><div class="ico-sm"></div>산 이름으로 검색...</div>
+          <div class="row" style="gap:6px;overflow:hidden;">
+            <div class="chip chip-dark">전체</div>
+            <div class="chip">초급</div>
+            <div class="chip">중급</div>
+            <div class="chip">고급</div>
+            <div class="chip">서울</div>
+            <div class="chip">경기</div>
+          </div>
+        </div>
+        <div class="body with-tabbar" style="padding:12px 20px;overflow:hidden;">
+          <div class="col" style="gap:10px;">
+            <div class="box" style="padding:12px;display:flex;gap:12px;background:#fff;">
+              <div class="placeholder-img" style="width:64px;height:64px;flex-shrink:0;">🏔</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">북한산</div>
+                <div class="mono" style="margin-bottom:6px;">서울 강북구 · 836m</div>
+                <div class="row" style="gap:6px;"><span class="chip" style="font-size:10px;">☀️ 맑음</span><span class="chip" style="font-size:10px;">😷 보통</span></div>
+              </div>
+            </div>
+            <div class="box" style="padding:12px;display:flex;gap:12px;background:#fff;">
+              <div class="placeholder-img" style="width:64px;height:64px;flex-shrink:0;">🏔</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">관악산</div>
+                <div class="mono" style="margin-bottom:6px;">서울 관악구 · 632m</div>
+                <div class="row" style="gap:6px;"><span class="chip" style="font-size:10px;">⛅ 흐림</span><span class="chip" style="font-size:10px;">😷 좋음</span></div>
+              </div>
+            </div>
+            <div class="box" style="padding:12px;display:flex;gap:12px;background:#fff;">
+              <div class="placeholder-img" style="width:64px;height:64px;flex-shrink:0;">🏔</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">도봉산</div>
+                <div class="mono" style="margin-bottom:6px;">서울 도봉구 · 740m</div>
+                <div class="row" style="gap:6px;"><span class="chip" style="font-size:10px;">☀️ 맑음</span><span class="chip" style="font-size:10px;">🐛 주의</span></div>
+              </div>
+            </div>
+            <div class="box" style="padding:12px;display:flex;gap:12px;background:#fff;">
+              <div class="placeholder-img" style="width:64px;height:64px;flex-shrink:0;">🏔</div>
+              <div style="flex:1;">
+                <div class="h3" style="margin-bottom:2px;">수락산</div>
+                <div class="mono" style="margin-bottom:6px;">서울 노원구 · 638m</div>
+                <div class="row" style="gap:6px;"><span class="chip" style="font-size:10px;">☀️ 맑음</span><span class="chip" style="font-size:10px;">😷 나쁨</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tabbar">
+          <div class="tab"><div class="tab-icon"></div>홈</div>
+          <div class="tab active"><div class="tab-icon"></div>산목록</div>
+          <div class="tab"><div class="tab-icon"></div>트래킹</div>
+          <div class="tab"><div class="tab-icon"></div>커뮤니티</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 10. 산 상세 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">03-02</span>산 상세 페이지</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="topbar"><span class="back">←</span><span class="title">북한산</span><div class="ico"></div></div>
+        <div class="body with-topbar" style="padding:0;overflow:hidden;">
+          <div class="placeholder-img" style="height:140px;border-radius:0;border-left:none;border-right:none;">대표 이미지</div>
+          <div style="padding:16px 20px;">
+            <div class="h1" style="margin-bottom:4px;">북한산</div>
+            <div class="mono" style="margin-bottom:12px;">🏔 836m · 📍 서울특별시 강북구</div>
+            <div class="body-text" style="margin-bottom:16px;">북한산은 서울과 경기도 고양시에 걸쳐 있는 산으로, 백운대·인수봉·만경대 삼각봉이 유명합니다.</div>
+            <div class="box" style="padding:10px 12px;background:#fff;border-color:var(--text-1);margin-bottom:20px;">
+              <div class="row" style="gap:8px;"><span>⚠️</span><div><div class="h3" style="font-size:13px;">탐방로 통제 정보</div><div class="mono" style="font-size:11px;margin-top:2px;">대남문 코스 통제 중 (~ 2026-05-15)</div></div></div>
+            </div>
+            <div class="row between" style="margin-bottom:10px;"><div class="h3">📋 코스 목록</div><div class="mono">3개</div></div>
+            <div class="col" style="gap:8px;">
+              <div class="box" style="padding:10px 12px;">
+                <div class="row between" style="margin-bottom:2px;"><div class="h3" style="font-size:13px;">우이암 코스</div><div class="chip" style="font-size:10px;">초급</div></div>
+                <div class="mono">2.1km · 1h 30m</div>
+              </div>
+              <div class="box" style="padding:10px 12px;background:#fff;border-color:var(--accent);">
+                <div class="row between" style="margin-bottom:2px;"><div class="h3" style="font-size:13px;">백운대 코스 ⭐</div><div class="chip chip-dark" style="font-size:10px;">중급</div></div>
+                <div class="mono">3.2km · 2h 15m</div>
+              </div>
+              <div class="box" style="padding:10px 12px;">
+                <div class="row between" style="margin-bottom:2px;"><div class="h3" style="font-size:13px;">종주 코스</div><div class="chip" style="font-size:10px;">고급</div></div>
+                <div class="mono">8.5km · 5h</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 11. 코스 상세 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">03-03</span>코스 상세 페이지</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="topbar"><span class="back">←</span><span class="title">백운대 코스</span><div class="ico"></div></div>
+        <div class="body with-topbar" style="padding:0;overflow:hidden;">
+          <div style="padding:16px 20px 0;">
+            <div class="map" style="height:120px;margin-bottom:16px;">
+              <div class="map-pin map-pin-user" style="top:80%;left:10%;"></div>
+              <div class="map-pin" style="top:15%;left:85%;"></div>
+              <svg style="position:absolute;inset:0;width:100%;height:100%;"><path d="M 40 100 Q 150 60, 280 20" stroke="#2B2B2B" stroke-width="2" fill="none" stroke-dasharray="4 3"/></svg>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
+              <div class="box" style="padding:8px 10px;background:#fff;"><div class="label">난이도</div><div class="h3" style="font-size:13px;">⭐⭐⭐ 중급</div></div>
+              <div class="box" style="padding:8px 10px;background:#fff;"><div class="label">거리</div><div class="h3" style="font-size:13px;">3.2km</div></div>
+              <div class="box" style="padding:8px 10px;background:#fff;"><div class="label">예상 소요</div><div class="h3" style="font-size:13px;">2h 15m</div></div>
+              <div class="box" style="padding:8px 10px;background:#fff;"><div class="label">고도차</div><div class="h3" style="font-size:13px;">520m ↑</div></div>
+            </div>
+            <div class="col" style="gap:6px;margin-bottom:12px;">
+              <div class="row" style="gap:6px;"><span style="font-size:11px;color:var(--text-3);">📍 출발</span><span class="body-text">우이동 주차장</span></div>
+              <div class="row" style="gap:6px;"><span style="font-size:11px;color:var(--text-3);">📍 도착</span><span class="body-text">백운대 정상</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="h3" style="margin-bottom:6px;">🚌 교통편</div>
+            <div class="body-text" style="margin-bottom:10px;">지하철 4호선 · 우이신설선 우이역</div>
+            <div class="h3" style="margin-bottom:6px;">🏪 편의시설</div>
+            <div class="body-text" style="margin-bottom:10px;">화장실 (출발/중간) · 매점 (중간 휴게소)</div>
+            <div class="h3" style="margin-bottom:6px;">👥 평균 소요 시간</div>
+            <div class="body-text" style="margin-bottom:80px;">2h 10m <span style="color:var(--text-3);">· 128명 기록 기준</span></div>
+          </div>
+          <div class="btn btn-full" style="position:absolute;bottom:28px;left:20px;right:20px;">🎬 기록하기 시작</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== SECTION 4: TRACKING ===================== -->
+<section class="section">
+  <h2 class="section-title"><span class="section-num">04</span>트래킹 — Tracking <span style="font-size:11px;color:var(--text-3);font-weight:400;margin-left:8px;">가장 핵심</span></h2>
+  <div class="frames">
+
+    <!-- 12. 트래킹 시작 전 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">04-01</span>트래킹 시작 전 (프리뷰)</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="topbar"><span class="back">←</span><span class="title">백운대 코스</span></div>
+        <div class="body with-topbar" style="padding:20px;overflow:hidden;">
+          <div class="map" style="height:200px;margin-bottom:20px;">
+            <div class="map-pin map-pin-user" style="top:80%;left:10%;"></div>
+            <div class="map-pin" style="top:15%;left:85%;"></div>
+            <svg style="position:absolute;inset:0;width:100%;height:100%;"><path d="M 40 170 Q 150 120, 280 30" stroke="#2B2B2B" stroke-width="2" fill="none" stroke-dasharray="4 3"/></svg>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:20px;">
+            <div class="col" style="align-items:center;gap:2px;"><div class="label">거리</div><div class="h2">3.2<span style="font-size:12px;">km</span></div></div>
+            <div class="col" style="align-items:center;gap:2px;"><div class="label">예상</div><div class="h2">2h<span style="font-size:12px;">15m</span></div></div>
+            <div class="col" style="align-items:center;gap:2px;"><div class="label">고도차</div><div class="h2">520<span style="font-size:12px;">m</span></div></div>
+          </div>
+          <div class="box" style="padding:12px;background:#fff;margin-bottom:12px;">
+            <div class="row between" style="margin-bottom:8px;"><div class="row" style="gap:8px;"><span>☀️</span><span class="h3" style="font-size:13px;">오늘 날씨</span></div><div class="body-text">맑음 · 22°C</div></div>
+            <div class="divider" style="margin:8px 0;"></div>
+            <div class="row between"><div class="row" style="gap:8px;"><span>🌅</span><span class="h3" style="font-size:13px;">일몰 시간</span></div><div class="body-text" style="font-weight:600;color:var(--text-1);">19:35</div></div>
+          </div>
+          <div class="box" style="padding:10px 12px;background:var(--warning-fill);border-color:var(--text-2);margin-bottom:16px;">
+            <div class="body-text" style="font-size:12px;">⚠ 안전 완등 권장 출발 시간: <strong>15:20 이전</strong></div>
+          </div>
+          <div class="btn btn-full" style="position:absolute;bottom:40px;left:20px;right:20px;font-size:17px;padding:18px;">▶︎ 등산 시작</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 13. 트래킹 진행 중 (핵심) -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">04-02</span>트래킹 진행 중 <span style="color:var(--accent);font-weight:600;">★ 핵심 화면</span></div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div style="padding:8px 16px;border-bottom:1px solid var(--line);">
+          <div class="search" style="height:36px;font-size:12px;"><div class="ico-sm"></div>현 위치 검색 · 이정표 입력</div>
+        </div>
+        <!-- Map -->
+        <div class="map" style="height:280px;border-radius:0;border:none;position:relative;">
+          <svg style="position:absolute;inset:0;width:100%;height:100%;"><path d="M 50 240 Q 150 180, 200 120 T 320 30" stroke="#2B2B2B" stroke-width="2.5" fill="none"/></svg>
+          <div class="map-pin map-pin-user" style="top:70%;left:40%;"></div>
+          <div class="map-pin" style="top:10%;left:85%;"></div>
+          <div style="position:absolute;top:12px;right:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:11px;">🧭 GPS 강함</div>
+        </div>
+        <!-- Progress -->
+        <div style="padding:12px 16px;border-bottom:1px solid var(--line);">
+          <div class="row between" style="margin-bottom:6px;"><div class="label">진행률</div><div class="mono">56% · 정상까지</div></div>
+          <div class="progress"><div class="progress-fill" style="width:56%;"></div></div>
+          <div class="row between" style="font-size:10px;color:var(--text-3);margin-top:4px;"><span>출발</span><span>정상</span><span>하산</span></div>
+        </div>
+        <!-- Stats -->
+        <div style="padding:12px 16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;border-bottom:1px solid var(--line);">
+          <div class="col" style="align-items:center;gap:0;"><div class="label" style="font-size:9px;">경과</div><div class="h3" style="font-family:ui-monospace,monospace;">01:15:23</div></div>
+          <div class="col" style="align-items:center;gap:0;"><div class="label" style="font-size:9px;">이동</div><div class="h3">1.8<span style="font-size:10px;">/3.2km</span></div></div>
+          <div class="col" style="align-items:center;gap:0;"><div class="label" style="font-size:9px;">고도</div><div class="h3">320<span style="font-size:10px;">m</span></div></div>
+        </div>
+        <!-- Predictions -->
+        <div style="padding:10px 16px;">
+          <div class="row between" style="margin-bottom:6px;"><div class="body-text" style="font-size:12px;">🎯 정상까지</div><div class="mono" style="color:var(--text-1);font-weight:600;">25분</div></div>
+          <div class="row between" style="margin-bottom:6px;"><div class="body-text" style="font-size:12px;">🏁 하산 예정</div><div class="mono" style="color:var(--text-1);font-weight:600;">17:30</div></div>
+          <div class="row between" style="padding:8px 10px;background:var(--warning-fill);border-radius:8px;border:1px solid var(--border);"><div class="body-text" style="font-size:12px;font-weight:600;color:var(--text-1);">🌅 일몰까지</div><div class="mono" style="color:var(--text-1);font-weight:700;">2시간 5분</div></div>
+        </div>
+        <!-- Controls -->
+        <div style="position:absolute;bottom:28px;left:16px;right:16px;display:grid;grid-template-columns:52px 52px 1fr;gap:8px;">
+          <div class="box center" style="height:52px;background:#fff;"><span style="font-size:18px;">⏸</span></div>
+          <div class="box center" style="height:52px;background:#fff;"><span style="font-size:18px;">📷</span></div>
+          <div class="btn" style="display:flex;align-items:center;justify-content:center;font-size:14px;">✓ 정상 도착</div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 14. LiveClimb 팝업 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">04-03</span>LiveClimb 촬영 알림</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div style="position:relative;height:calc(100% - 44px);">
+          <div class="map" style="position:absolute;inset:0;border-radius:0;border:none;">
+            <svg style="position:absolute;inset:0;width:100%;height:100%;"><path d="M 50 600 Q 150 400, 200 300 T 320 100" stroke="#2B2B2B" stroke-width="2.5" fill="none"/></svg>
+            <div class="map-pin map-pin-user" style="top:50%;left:45%;"></div>
+          </div>
+          <div class="overlay"></div>
+          <div class="popup" style="width:300px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--placeholder);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:24px;">📸</div>
+            <div class="h1" style="font-size:20px;margin-bottom:4px;">LiveClimb</div>
+            <div class="h2" style="margin-bottom:8px;">500m 돌파! 🎉</div>
+            <div class="body-text" style="margin-bottom:20px;">이 순간의 풍경과 표정을<br/>기록해보세요.</div>
+            <div class="col" style="gap:8px;">
+              <div class="btn btn-full">📷 지금 촬영</div>
+              <div style="text-align:center;font-size:13px;color:var(--text-3);padding:8px;">나중에</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. 정상 도착 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">04-04</span>정상 도착</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="body no-top" style="padding:40px 28px;display:flex;flex-direction:column;height:calc(100% - 44px);">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+            <div style="font-size:56px;">🏔️</div>
+            <div style="text-align:center;">
+              <div class="label" style="margin-bottom:8px;">SUMMIT REACHED</div>
+              <div class="h1" style="font-size:26px;margin-bottom:4px;">정상 도착!</div>
+              <div class="body-text">백운대 · 836m</div>
+            </div>
+            <div style="width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;">
+              <div class="box" style="padding:14px;text-align:center;background:#fff;"><div class="label" style="margin-bottom:2px;">소요 시간</div><div class="h2">2h 10m</div></div>
+              <div class="box" style="padding:14px;text-align:center;background:#fff;"><div class="label" style="margin-bottom:2px;">이동 거리</div><div class="h2">3.2km</div></div>
+            </div>
+            <div class="box" style="width:100%;padding:10px;background:var(--warning-fill);border-color:var(--border);margin-top:4px;">
+              <div class="body-text" style="font-size:12px;text-align:center;">🌅 안전 하산을 위해 17:30 전 출발하세요</div>
+            </div>
+          </div>
+          <div class="col" style="gap:10px;">
+            <div class="btn btn-full">📸 정상 인증샷</div>
+            <div class="btn btn-full btn-ghost">⬇︎ 하산 시작</div>
+          </div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+    <!-- 16. 완료 리포트 -->
+    <div class="frame">
+      <div class="frame-label"><span class="frame-id">04-05</span>등산 완료 그래픽 리포트</div>
+      <div class="phone">
+        <div class="statusbar"><span>9:41</span><span class="r"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>
+        <div class="body no-top" style="padding:24px 20px;overflow:hidden;">
+          <div style="text-align:center;margin-bottom:20px;">
+            <div style="font-size:40px;margin-bottom:4px;">🏆</div>
+            <div class="h1" style="font-size:22px;margin-bottom:2px;">백운대 코스 완주!</div>
+            <div class="mono">2026-04-22</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;">
+            <div class="box" style="padding:10px;background:#fff;"><div class="label">소요 시간</div><div class="h3">2h 10m 35s</div></div>
+            <div class="box" style="padding:10px;background:#fff;"><div class="label">이동 거리</div><div class="h3">3.2km</div></div>
+            <div class="box" style="padding:10px;background:#fff;"><div class="label">고도차</div><div class="h3">520m</div></div>
+            <div class="box" style="padding:10px;background:#fff;"><div class="label">칼로리</div><div class="h3">450 kcal</div></div>
+          </div>
+          <div class="label" style="margin-bottom:6px;">📈 고도 그래프</div>
+          <div class="box" style="padding:8px;background:#fff;margin-bottom:12px;">
+            <svg viewBox="0 0 300 80" style="width:100%;height:70px;">
+              <path d="M 0 70 Q 60 50, 100 35 T 180 10 L 220 15 Q 260 40, 300 65" stroke="#2B2B2B" stroke-width="2" fill="none"/>
+              <path d="M 0 70 Q 60 50, 100 35 T 180 10 L 220 15 Q 260 40, 300 65 L 300 80 L 0 80 Z" fill="#ECECEE"/>
+            </svg>
+            <div class="row between" style="font-size:9px;color:var(--text-3);margin-top:2px;"><span>출발</span><span>정상 (520m)</span><span>도착</span></div>
+          </div>
+          <div class="label" style="margin-bottom:6px;">🗺 경로 지도</div>
+          <div class="map" style="height:90px;margin-bottom:60px;">
+            <div class="map-pin map-pin-user" style="top:75%;left:10%;"></div>
+            <div class="map-pin" style="top:15%;left:85%;"></div>
+            <svg style="position:absolute;inset:0;width:100%;height:100%;"><path d="M 40 70 Q 150 30, 280 15" stroke="#2B2B2B" stroke-width="2" fill="none"/></svg>
+          </div>
+          <div style="position:absolute;bottom:28px;left:20px;right:20px;display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div class="btn btn-full btn-ghost">💾 저장</div>
+            <div class="btn btn-full">📤 공유</div>
+          </div>
+        </div>
+        <div class="home-indicator"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div>SEMOSAN Lo-fi Wireframes v0.1 · Claude Code generated · 2026-04-22</div>
+  <div style="margin-top:4px;">16 screens · iPhone 375×812 · Pretendard</div>
+</footer>
+
+</body>
+</html>
