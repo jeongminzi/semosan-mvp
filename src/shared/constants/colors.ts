@@ -37,24 +37,24 @@ export const Primitive = {
 
   status: {
     success: {
-      light: '#DCFCE7',
-      main: '#22C55E',
-      dark: '#15803D',
+      light: '#F0FDF4', // 50
+      main: '#22C55E', // 500
+      dark: '#15803D', // 700
     },
     warning: {
-      light: '#FEF3C7',
-      main: '#F59E0B',
-      dark: '#B45309',
+      light: '#FFFBEB', // 50
+      main: '#F59E0B', // 500
+      dark: '#B45309', // 700
     },
     danger: {
-      light: '#FEE2E2',
-      main: '#EF4444',
-      dark: '#B91C1C',
+      light: '#FEF2F2', // 50
+      main: '#EF4444', // 500
+      dark: '#B91C1C', // 700
     },
     info: {
-      light: '#DBEAFE',
-      main: '#3B82F6',
-      dark: '#1D4ED8',
+      light: '#EFF6FF', // 50
+      main: '#3B82F6', // 500
+      dark: '#1D4ED8', // 700
     },
   },
 

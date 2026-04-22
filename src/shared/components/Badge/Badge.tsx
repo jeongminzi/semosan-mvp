@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
 });
 
 const VARIANT_STYLES: Record<BadgeVariant, { bg: string; fg: string }> = {
-  default: { bg: Primitive.gray[100], fg: Colors.text.secondary },
+  default: { bg: Primitive.gray[50], fg: Colors.text.secondary },
   primary: { bg: Colors.interactive.primary, fg: Colors.text.inverse },
-  weak: { bg: Colors.interactive.weak, fg: Colors.interactive.weakText },
-  success: { bg: Primitive.status.success.light, fg: Primitive.status.success.dark },
-  warning: { bg: Primitive.status.warning.light, fg: Primitive.status.warning.dark },
-  danger: { bg: Primitive.status.danger.light, fg: Primitive.status.danger.dark },
-  info: { bg: Primitive.status.info.light, fg: Primitive.status.info.dark },
+  weak: { bg: Colors.interactive.weak, fg: Colors.interactive.weakText }, // primary[50]
+  success: { bg: Primitive.status.success.light, fg: Primitive.status.success.dark }, // success[50]
+  warning: { bg: Primitive.status.warning.light, fg: Primitive.status.warning.dark }, // warning[50]
+  danger: { bg: Primitive.status.danger.light, fg: Primitive.status.danger.dark }, // danger[50]
+  info: { bg: Primitive.status.info.light, fg: Primitive.status.info.dark }, // info[50]
   dark: { bg: Primitive.gray[900], fg: Colors.text.inverse },
 };
 

@@ -1,5 +1,6 @@
 import React, { forwardRef, useState } from 'react';
 import {
+  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -27,11 +28,17 @@ export interface InputProps extends Omit<TextInputProps, 'style'> {
   containerStyle?: StyleProp<ViewStyle>;
 }
 
+// React Native Web에서 브라우저 기본 파란 outline 제거
+const webNoOutline = Platform.select({
+  web: { outlineWidth: 0, outlineStyle: 'none' as const },
+  default: {},
+}) as any;
+
 /**
  * Input — 텍스트 입력 필드
- * - height 48
- * - focus: border primary
- * - error: border danger + error text
+ * - Height 48, borderWidth 1.5
+ * - Focus: border color → text.primary (검정)
+ * - Error: border color → danger
  */
 export const Input = forwardRef<TextInput, InputProps>(function Input(
   {
@@ -54,7 +61,7 @@ export const Input = forwardRef<TextInput, InputProps>(function Input(
   const borderColor = hasError
     ? Colors.border.error
     : focused
-      ? Colors.border.focus
+      ? Colors.text.primary
       : Colors.border.default;
 
   return (
@@ -71,7 +78,7 @@ export const Input = forwardRef<TextInput, InputProps>(function Input(
         {leftIcon && <View style={styles.icon}>{leftIcon}</View>}
         <TextInput
           ref={ref}
-          style={styles.input}
+          style={[styles.input, webNoOutline]}
           editable={!disabled}
           placeholderTextColor={Colors.text.placeholder}
           onFocus={(e) => {
@@ -111,7 +118,7 @@ const styles = StyleSheet.create({
     height: ComponentHeight.input, // 48
     paddingHorizontal: Spacing[4],
     borderRadius: BorderRadius.md,
-    borderWidth: 1,
+    borderWidth: 1.5,
     backgroundColor: Colors.background.primary,
     gap: Spacing[2],
   },
