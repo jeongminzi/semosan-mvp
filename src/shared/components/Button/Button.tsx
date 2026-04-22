@@ -21,6 +21,7 @@ import {
 
 export type ButtonVariant =
   | 'primary'
+  | 'weak'
   | 'secondary'
   | 'outline'
   | 'ghost'
@@ -146,6 +147,10 @@ const CONTAINER_STYLES: Record<ButtonVariant, ViewStyle> = {
     backgroundColor: Colors.interactive.primary,
     borderWidth: 0,
   },
+  weak: {
+    backgroundColor: Colors.interactive.weak,
+    borderWidth: 0,
+  },
   secondary: {
     backgroundColor: Colors.interactive.secondary,
     borderWidth: 1,
@@ -168,6 +173,7 @@ const CONTAINER_STYLES: Record<ButtonVariant, ViewStyle> = {
 
 const TEXT_STYLES: Record<ButtonVariant, { color: string }> = {
   primary: { color: Colors.text.inverse },
+  weak: { color: Colors.interactive.weakText },
   secondary: { color: Colors.text.primary },
   outline: { color: Colors.interactive.primary },
   ghost: { color: Colors.text.primary },
@@ -179,7 +185,7 @@ const SIZE_STYLES = {
     container: {
       height: ComponentHeight.buttonSm, // 32
       paddingHorizontal: Spacing[3], // 12
-      borderRadius: BorderRadius.base, // 8
+      borderRadius: BorderRadius.md, // 12 (한 단계 ↑)
     } satisfies ViewStyle,
     text: Typography.buttonSm,
   },
@@ -187,7 +193,7 @@ const SIZE_STYLES = {
     container: {
       height: ComponentHeight.buttonMd, // 40
       paddingHorizontal: Spacing[4], // 16
-      borderRadius: BorderRadius.md, // 12
+      borderRadius: BorderRadius.lg, // 16 (한 단계 ↑)
     } satisfies ViewStyle,
     text: Typography.button,
   },

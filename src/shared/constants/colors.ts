@@ -106,6 +106,12 @@ export const Colors = {
     secondaryHover: Primitive.gray[50],
     secondaryPressed: Primitive.gray[100],
 
+    // Weak — primary tone 유지하되 연한 배경 (보조 강조)
+    weak: Primitive.primary[50],
+    weakHover: Primitive.primary[100],
+    weakPressed: Primitive.primary[200],
+    weakText: Primitive.primary[700],
+
     ghost: 'transparent',
     ghostHover: Primitive.gray[50],
     ghostPressed: Primitive.gray[100],

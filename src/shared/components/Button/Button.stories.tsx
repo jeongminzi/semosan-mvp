@@ -21,7 +21,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'outline', 'ghost', 'danger'],
+      options: ['primary', 'weak', 'secondary', 'outline', 'ghost', 'danger'],
     },
     size: {
       control: 'inline-radio',
@@ -59,6 +59,10 @@ export const Primary: Story = {
   args: { variant: 'primary', children: '등산 시작' },
 };
 
+export const Weak: Story = {
+  args: { variant: 'weak', children: '기록 더보기' },
+};
+
 export const Secondary: Story = {
   args: { variant: 'secondary', children: '취소' },
 };
@@ -79,6 +83,7 @@ export const AllVariants: Story = {
   render: () => (
     <View style={{ gap: Spacing[3], alignItems: 'flex-start' }}>
       <Button variant="primary">Primary</Button>
+      <Button variant="weak">Weak</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="outline">Outline</Button>
       <Button variant="ghost">Ghost</Button>
