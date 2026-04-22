@@ -7,20 +7,31 @@ node_modules/
 .expo/
 dist/
 web-build/
-*.orig.*
+expo-env.d.ts
+
+# Metro
+.metro-health-check*
 
 # Native
+.kotlin/
 *.iml
 .idea/
 .gradle
 local.properties
 *.hprof
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
 
 # iOS
 *.ipa
 *.pem
 ios/Pods/
 ios/build/
+/ios
 
 # Android
 *.apk
@@ -28,11 +39,13 @@ ios/build/
 android/.gradle/
 android/app/build/
 android/build/
+/android
 
 # Environment
 .env
 .env.local
 .env.*.local
+*.tsbuildinfo
 
 # Logs
 npm-debug.*
@@ -49,7 +62,6 @@ Thumbs.db
 
 # Editors
 .vscode/
-.idea/
 *.swp
 *.swo
 
@@ -57,3 +69,9 @@ Thumbs.db
 dist/
 build/
 .cache/
+
+# Storybook
+storybook-static/
+
+# Temp
+__expo_init/
